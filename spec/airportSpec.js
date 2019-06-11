@@ -32,5 +32,11 @@ describe("Airport", function() {
     it("can respond to a takeOff method", function() {
       expect(airport.takeOff).toBeDefined();
     });
+
+    it("can remove a plane from hanger", function() {
+      airport.land('plane1');
+      airport.takeOff();
+      expect(airport.hanger.length).toEqual(0)
+    });
   });
 });
