@@ -15,15 +15,22 @@ describe("Airport", function() {
 
   it("can hold multiple planes", function(){
     expect(airport.hanger).toEqual([]);
-  })
+  });
 
-  it("can respond to a land method", function(){
-    expect(airport.land).toBeDefined();
-  })
+  describe("#land", function() {
+    it("can respond to a land method", function(){
+      expect(airport.land).toBeDefined();
+    });
 
-  it("can add plane to hanger", function(){
-    airport.land('plane');
-    expect(airport.hanger.length).toEqual(1)
+    it("can add plane to hanger", function(){
+      airport.land('plane');
+      expect(airport.hanger.length).toEqual(1)
+    });
+  });
 
-  })
+  describe("#takeOff", function() {
+    it("can respond to a takeOff method", function() {
+      expect(airport.takeOff).toBeDefined();
+    });
+  });
 });
