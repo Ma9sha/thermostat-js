@@ -39,4 +39,14 @@ describe("Airport", function() {
       expect(airport.hanger.length).toEqual(0)
     });
   });
+
+  describe("#isfull", function(){
+    it("checks if the hanger is full?", function(){
+      for(i=1; i<=5; i++)
+      {
+        airport.land('plane' +i);
+      }
+      expect(airport.land('plane6')).toThrowError("hanger is full");
+    })
+  })
 });
