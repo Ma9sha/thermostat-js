@@ -5,3 +5,7 @@ function Plane() {
 Plane.prototype.reportInFlight = function() {
   return this._flying = true;
 }
+
+Plane.prototype._flying = function(){
+  return this._flying;
+}

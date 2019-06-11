@@ -4,6 +4,11 @@ describe("Plane", function() {
     expect(plane instanceof Plane).toBe(true);
   });
 
+  it("tests for default value for flying", function(){
+    var plane = new Plane();
+    expect(plane._flying).toBe(false);
+  });
+
   it("can be reported as flying", function() {
     var plane = new Plane();
     var output = plane.reportInFlight();
