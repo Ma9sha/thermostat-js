@@ -6,7 +6,7 @@ describe("Plane", function() {
 
   it("tests for default value for flying", function(){
     var plane = new Plane();
-    expect(plane._flying).toBe(false);
+    expect(plane.flying).toBe(false);
   });
 
   it("can be reported as flying", function() {
