@@ -14,4 +14,11 @@ describe("Plane", function() {
     var output = plane.reportInFlight();
     expect(output).toBe(true);
   });
+
+  it("checks whether the plane is inflight", function() {
+    var plane = new Plane();
+    plane.reportInFlight();
+    expect(plane.isflying()).toBe(true)
+
+  })
 });
