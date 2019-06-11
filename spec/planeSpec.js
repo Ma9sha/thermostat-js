@@ -19,6 +19,5 @@ describe("Plane", function() {
     var plane = new Plane();
     plane.reportInFlight();
     expect(plane.isflying()).toBe(true)
-
-  })
+  });
 });
