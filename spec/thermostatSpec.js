@@ -56,4 +56,19 @@ describe ("Thermostat", function(){
     });
   });
 
+  describe("#energyUsage", function() {
+    it("can display low-usage", function() {
+      thermostat.tempDown(3);
+      expect(thermostat.energyUsage()).toEqual("low-usage");
+    });
+
+    it("can display medium-usage", function() {
+      expect(thermostat.energyUsage()).toEqual("medium-usage");
+    });
+
+    it("can display high-usage", function() {
+      thermostat.tempUp(6);
+      expect(thermostat.energyUsage()).toEqual("high-usage");
+    });
+  });
 });
