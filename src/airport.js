@@ -5,7 +5,8 @@ function Airport(capacity = 5) {
 
 Airport.prototype.land = function(plane){
   if (this.hanger.length >= this.capacity) {
-    throw "hanger is full";
+    
+    throw new Error("hanger is full");
   }  
   this.hanger.push(plane);
   

@@ -46,7 +46,7 @@ describe("Airport", function() {
       {
         airport.land('plane' +i);
       }
-      expect(airport.land('plane6')).toThrowError("hanger is full");
+      expect(function() {airport.land('plane6')}).toThrow(new Error("hanger is full"));
     })
   })
 });
