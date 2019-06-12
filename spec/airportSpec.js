@@ -47,6 +47,14 @@ describe("Airport", function() {
         airport.land('plane' +i);
       }
       expect(function() {airport.land('plane6')}).toThrow(new Error("hanger is full"));
-    })
-  })
+    });
+
+    it("checks if hanger is full", function() {
+      for(i=1; i<=5; i++)
+      {
+        airport.land('plane' +i);
+      }
+      expect(airport.isfull()).toBe(true)
+    });
+  });
 });
