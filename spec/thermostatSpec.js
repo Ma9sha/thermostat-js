@@ -25,6 +25,12 @@ describe ("Thermostat", function(){
       expect(thermostat.temp).toEqual(25);
     });
 
+    it("can set max temp (powerSavingMode Off)", function() {
+      thermostat.powerSavingMode(false)
+      thermostat.tempUp(15)
+      expect(thermostat.temp).toEqual(32);
+    });
+
   });
 
   describe("#tempDown", function() {
