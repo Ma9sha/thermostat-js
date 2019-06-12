@@ -25,3 +25,7 @@ Thermostat.prototype.powerSavingMode = function(value=true){
 Thermostat.prototype._tempTotal = function(temp, increase) {
   return temp += increase;
 }
+
+Thermostat.prototype.reset = function () {
+  this.temp = 20;
+};

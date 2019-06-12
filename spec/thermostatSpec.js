@@ -48,4 +48,12 @@ describe ("Thermostat", function(){
     });
   });
 
+  describe("#reset", function() {
+    it("can reset to default temp", function(){
+      thermostat.tempUp(3)
+      thermostat.reset()
+      expect(thermostat.temp).toEqual(20)
+    });
+  });
+
 });
